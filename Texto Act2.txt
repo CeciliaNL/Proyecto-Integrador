@@ -1,0 +1,16 @@
+2. LÓGICA UTILIZADA EN EL EJERCICIO:
+Me dispuse a diseñar una biblioteca utilizando un login de administrativo y otro de alumno creando sus respectivas clases, para así diferenciar la información a la que cada uno tiene acceso.
+Para validar los usuarios y contraseñas correctos utilice un bucle "for each" para recorrer la lista de usuarios registrados y un "equals" para compararlos, en caso de estar registrado devuelve un "boolean true", sino un "false".
+
+En el menu de la sesión del administrativo: 1.Agregar libro a la biblioteca: Pido los datos y lo agrego a un "Array List"
+                                           2.Eliminar libro: Recorro la lista con un bucle "for each", si lo encuentra lo elimina con "remove". En caso de no hacerlo, lanza un mensaje.
+                                           3.Mostrar biblioteca: A través del "OptionPane" le envie la lista utilizando la función "toString" para que lo muestre por pantalla.
+                                           4.Cerrar sesión: Englobe todo en un "do/while" el cual en caso de presionar la tecla 4 sale del bucle.
+
+En el menu de la sesión del alumno: 1.Mostrar libros aliquilados: Desde el Main envio a "servicioAlumno" un objeto de tipo "Alumno" el cual alberga todo sus datos incluso los libros alquilados. Con "OptionPane" y "toString" lo muestro por pantalla al llamado "ArrayList" del tipo alumno.
+                                    2.Alquilar libro nuevo: Llamo al "ArrayList" que contiene todos los libros, lo muestro por pantalla, le pido ingresar el IDBN (que es el dato unico para cada libro) y luego recorro el "ArrayList" con un bucle "for" en el cual comparo el ISBN proporcionado por el usuario. En caso de ya poseerlo, lanza un mensaje. Caso contrario, se agrega a su lista de libros alquilados.
+                                    3.Devolver libro: Llama al "ArrayList" que contiene el "alumno" donde se guardan los libros alquilados, se pide el ISBN para especificar el libro a devolver. En caso de coincidir, utiliza "remove" para eliminarlo. Caso contrario, lanza un mensaje.
+                                    4.Cerrar sesión: Al igual que en el menu administrativo use un "do/while" el cual en caso de presionar la tecla 4 sale del bucle.
+
+
+3. Uno de los problemas con los que me encontre en la resolución de la consigna fue que al no poseer una base de datos tuve que ir pasando listas a los métodos para conservar los datos ingresados/alojados. Al encontrarme con los "ArrayList.toString" no se me hacian amigables al mostrarlos por pantalla, por ello tuve que crear un metodo que me devuelva un string corregido

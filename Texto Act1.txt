@@ -1,0 +1,9 @@
+2.LÓGICA UTILIZADA EN EL EJERCICIO:
+ El menú lo englobe en un bulce "do/while" para iterar hasta que el usuario desee salir.
+ 1.Para ingresar una persona nueva se le solicitan los datos y se le asigna a un objeto de tipo persona
+ 2.Para editar los datos se le pide el DNI de la persona a modificar, recorro con un bucle for each y comparo el DNI proporcionado con la lista. Si lo encuentra, elimina el usuario de la lista y le pide ingresar uno nuevo.
+ 3.Para eliminar personas, busca la persona por DNI en un bucle for. Si lo encuentra se utiliza remove, caso contrario arroja un mensaje.
+ 4.Para mostrar personas hice uso del toString y se lo asigno a un JOptionPane para mostrarlos por pantalla
+
+
+3.Uno de los problemas que enfrente al desarrollar la aplicación fue que en el item de "Editar personas" al momento de utilizar el set a traves del indice donde estaba alojado en el ArrayList me tiraba error. Tuve que utilizar remove y add para hacer la edición.
